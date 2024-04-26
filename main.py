@@ -22,7 +22,7 @@ FLAGS(sys.argv)
 def load_model():
     class_names = [c.strip() for c in open('./data/labels/coco.names').readlines()]
     yolo = YoloV3(classes=len(class_names))
-    yolo.load_weights('./weights/yolov3.weights')
+    yolo.load_weights('./weights/yolov3.weights.h5')
 
     max_cosine_distance = 0.5
     nn_budget = None
